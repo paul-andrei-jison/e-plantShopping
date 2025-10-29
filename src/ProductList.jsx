@@ -335,7 +335,19 @@ function ProductList({ onHomeClick }) {
                     {plantsArray.map((category, index) => (
                         <div key={index}>
                             <h3>
-                                <div>{category.category}</div>
+                                <div
+                                    style={{
+                                    textAlign: 'center',
+                                    fontSize: '2rem',
+                                    fontWeight: 'bold',
+                                    color: '#2e8b57', // deep green for plant vibes
+                                    margin: '1.5rem 0',
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '1px'
+                                    }}
+                                >
+                                    {category.category}
+                                </div>
                                 <div className='product-list'>
                                     {category.plants.map((plant) => {
                                         const isAdded = cart.find(item => item.name === plant.name);
